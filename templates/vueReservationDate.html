@@ -1,0 +1,19 @@
+<html DOCTYPE!>
+{% include "vueEntete.html" %}
+{% include "vueEnteteGestionnaire.html" %}
+
+<form  role="form" action="/gestionnaire/resaDate/lister" method="POST">
+	<button  name="numeroCarte" onclick="return alert ('Compte crédité')" type="date" value="{{Reservation[i]['dateResa']}}"  ></button>
+	<input id="date" type="date" name="dateResa">
+</form>
+
+	<center>
+	<table  class="table">
+	{% for i in range(taille1) %}
+		<ul>{{historique[i]}}</ul>
+	{% endfor %}
+	</table>
+	</center>
+
+{% include "vuePied.html" %}
+</html>

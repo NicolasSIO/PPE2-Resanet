@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{% include "vueEntete.html" %}
+{% include "vueEnteteGestionnaire.html" %}
+	<h3><center>Historique de la carte</center></h3>
+	
+	<center>
+	<table  class="table">
+	{% for i in range(taille) %}
+		<ul>{{dates[i]}}</ul>
+	{% endfor %}
+	</table>
+	</center>
+{% include "vuePied.html" %}
+</html>

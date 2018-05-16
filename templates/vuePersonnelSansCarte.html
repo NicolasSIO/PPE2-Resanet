@@ -1,0 +1,32 @@
+<html DOCTYPE!>
+{% include "vueEntete.html" %}
+{% include "vueEnteteGestionnaire.html" %}
+<h3>Liste du personnel sans carte</h3>
+<table class="table">
+	<thead class="thead-light">
+		<tr>
+			<th scope="col">Matricule</th>
+			<th scope="col">Nom</th>
+			<th scope="col">Prénom</th>
+			<th scope="col">Service</th>
+		</tr>
+	</thead>
+	<tbody>	
+		{% for i in range(non) %}
+		<tr>
+			<td>{{sansCarte[i]['matricule']}}</td>
+			<td>{{sansCarte[i]['nom']}}</td>
+			<td>{{sansCarte[i]['prenom']}}</td>
+			<td>{{sansCarte[i]['nomService']}}</td>
+			<td>
+				<form id="creerCompte" role="form" action="/gestionnaire/creerCompte" method="POST">
+					<button type="numeric"  name="matricule" id="creerCompte" value="{{sansCarte[i]['matricule']}}" onclick="return alert('Compte Créé')">Creer un compte</button>
+				</form>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% include "vuePied.html" %}
+</html>
+
