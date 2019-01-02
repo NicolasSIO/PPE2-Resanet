@@ -16,7 +16,7 @@
 		<tbody>	
 			{% for i in range(oui) %}
 			<tr>
-				<td>{{avecCarte[i]['matricule']}}</td>
+				<td>{{avecCarte[i]['numeroCarte']}}</td>
 				<td>{{avecCarte[i]['solde']}}</td>
 				<td>{{avecCarte[i]['matricule']}}</td>
 				<td>{{avecCarte[i]['nom']}}</td>
